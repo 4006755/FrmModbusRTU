@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="10.0.12" />
+    <PackageReference Include="thinger.DataConvertLib" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ModbusRTU\ModbusRTU.csproj" />
+    <ProjectReference Include="..\modbustcp\modbustcp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="FrmCollector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmModbusTCP .cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
